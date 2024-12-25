@@ -92,7 +92,7 @@ function CustomOptions(props: {
             <input key='use-cors' checked={useCORSProxy} type="checkbox" onChange={(ev) => setUseCORSProxy(ev.target.checked)}></input>
         </p>
         <br />
-        <a href="https://github.com/EXtremeExploit/ponySmash/wiki/Custom-Lists" target="_blank">What is this?</a>
+        <a href="https://github.com/ponySmash/ponySmash/wiki/Custom-Lists" target="_blank">What is this?</a>
     </>);
 }
 

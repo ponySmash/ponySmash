@@ -32,7 +32,7 @@ I was bored tbh
 * Now your request is for everyone to see, including me :D, so now i can comment on your changes if something is needed, or merge them if everything is fine
 
 ## Custom lists
-* Read the [wiki for customs list](https://github.com/EXtremeExploit/ponySmash/wiki/Custom-Lists)
+* Read the [wiki for customs list](https://github.com/ponySmash/ponySmash/wiki/Custom-Lists)
 
 ## Contributions/Developers
 * Read [`CONTRIBUTING.md`](./CONTRIBUTING.md)

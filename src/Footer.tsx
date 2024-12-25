@@ -58,10 +58,10 @@ export function Footer(props: {
     return (
         <footer id='footer'>
             <p id='footer-p'>
-                <a href="https://github.com/EXtremeExploit/ponySmash/releases">{version}</a> /
+                <a href="https://github.com/ponySmash/ponySmash/releases">{version}</a> /
                 Site by <a href="https://github.com/EXtremeExploit/">EXtremeExploit</a> /
-                Give me a star on <a href="https://github.com/EXtremeExploit/ponySmash">GitHub</a> /&nbsp;
-                <a href="https://github.com/EXtremeExploit/ponySmash/blob/master/LICENSE">License</a>
+                Give me a star on <a href="https://github.com/ponySmash/ponySmash">GitHub</a> /&nbsp;
+                <a href="https://github.com/ponySmash/ponySmash/blob/master/LICENSE">License</a>
                 <GetCredits event={props.event.current} eventData={props.eventData} />
             </p>
         </footer>

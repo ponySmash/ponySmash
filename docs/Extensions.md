@@ -1,5 +1,5 @@
 * Extensions is basically a way for a list to depend on another (built-in) list.
-* For example the **Default** list depends on the **Community** and **EQG** lists ([here](https://github.com/EXtremeExploit/ponySmash/blob/master/src/Lists.ts#L19)).
+* For example the **Default** list depends on the **Community** and **EQG** lists ([here](https://github.com/ponySmash/ponySmash/blob/master/src/Lists.ts#L19)).
 * Customs lists can also use this method of depending on other lists for doing lists that expand on already built-in or something similar.
 
 * An example for an extension is right below, with an explanation also below it
@@ -57,7 +57,7 @@
     * Value: extension data
 
 * The extension data provides the parser info about what list to grab from and what filters to apply to that list
-    * `list`: The **key** of the built-in list to grab characters from (you can see the list [here](https://github.com/EXtremeExploit/ponySmash/blob/master/src/Lists.ts))
+    * `list`: The **key** of the built-in list to grab characters from (you can see the list [here](https://github.com/ponySmash/ponySmash/blob/master/src/Lists.ts))
     * `filters`: Filters are the same as lists already use AND YOU USE TOO. More information [here](./Filters.md)
         * ## Extension's filters dont need a `text` value and `value` NEEDS to be `false` for the filter to apply
 

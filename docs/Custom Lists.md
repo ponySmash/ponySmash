@@ -126,4 +126,4 @@
   * Once its uploaded you need to get the raw URL of the list, usually in the service you have the list you have a "raw" button at the top, if you click it you should only see the list **and nothing else, not even a UI of any sort** (it should look something like: `https://pastebin.com/raw/0gHxT256` or `https://pastebin.com/raw/mYMf6yqW`)
   * Now you can try to load that URL into the game and see if it works, if it didn't work, you will get an alert telling you what could be the problem.
 * ALL characters from modern lists will be deduplicated based on the `img` property, this includes conflicts with custom lists and its extensions. Whichever one stays on the list will not always be consistent.
-* IF you still have problems figuring out how this works, you can check the example lists above or make a [new issue](https://github.com/EXtremeExploit/ponySmash/issues/new) explaining your problem, i would be happy to help
+* IF you still have problems figuring out how this works, you can check the example lists above or make a [new issue](https://github.com/ponySmash/ponySmash/issues/new) explaining your problem, i would be happy to help

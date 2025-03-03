@@ -1,49 +1,49 @@
 {
-  "name": "ponysmash",
-  "version": "2.15.0",
-  "description": "Smash or Pass for My Little Pony: Fiendship is Magic",
-  "main": "src/index.js",
-  "type": "module",
-  "author": "EXtremeExploit",
-  "license": "AGPL-3.0-only",
-  "dependencies": {
-    "@types/react": "^18.2.38",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-fastclick": "^3.0.2",
-    "react-ga4": "^2.1.0",
-    "react-scripts": "^5.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "mocha",
-    "eject": "react-scripts eject",
-    "minor": "npm version minor && git commit -S --amend --no-edit",
-    "patch": "npm version patch && git commit -S --amend --no-edit",
-    "major": "npm version major && git commit -S --amend --no-edit",
-    "updateProd": "git checkout master && git branch -f prod master && git checkout prod && git push --force && git checkout master"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@stylistic/eslint-plugin": "^1.5.0",
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "chai": "^5.0.0",
-    "eslint": "^8.55.0",
-    "mocha": "^10.2.0",
-    "tsx": "^4.7.0"
-  }
+    "name": "ponysmash",
+    "version": "2.15.0",
+    "description": "Smash or Pass for My Little Pony: Fiendship is Magic",
+    "main": "src/index.js",
+    "type": "module",
+    "author": "EXtremeExploit",
+    "license": "AGPL-3.0-only",
+    "dependencies": {
+        "@types/react": "^18.2.38",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-fastclick": "^3.0.2",
+        "react-ga4": "^2.1.0",
+        "react-scripts": "^5.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "mocha",
+        "eject": "react-scripts eject",
+        "minor": "npm version minor && git commit -S --amend --no-edit",
+        "patch": "npm version patch && git commit -S --amend --no-edit",
+        "major": "npm version major && git commit -S --amend --no-edit",
+        "updateProd": "git checkout master && git branch -f prod master && git checkout prod && git push --force && git checkout master"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@stylistic/eslint-plugin": "^1.5.0",
+        "@types/chai": "^4.3.11",
+        "@types/mocha": "^10.0.6",
+        "chai": "^5.0.0",
+        "eslint": "^8.55.0",
+        "mocha": "^10.2.0",
+        "tsx": "^4.7.0"
+    }
 }

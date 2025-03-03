@@ -31,6 +31,7 @@ function customListSubmitHandler(props: {
                     try {
                         JSON.parse(data.contents);
                     } catch (error) {
+                        console.error(error);
                         throw 'Content is invalid JSON';
                     }
 
@@ -71,8 +72,7 @@ function CustomOptions(props: {
     setFilteredList: StateSet<CharListAndNull>,
     setIsLoadingList: StateSet<boolean>,
     isLoadingList: boolean
-},
-) {
+}) {
     const [customListURL, setCustomListURL] = useState('');
     const [useCORSProxy, setUseCORSProxy] = useState(true);
 

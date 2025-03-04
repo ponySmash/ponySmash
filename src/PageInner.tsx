@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import EndScreen from './EndScreen.tsx';
-import Game from './Game.tsx';
-import Menu from './Menu.tsx';
-import { Character, GameState, ListName } from './types.ts';
+import EndScreen from './EndScreen';
+import Game from './Game';
+import Menu from './Menu';
+import { Character, GameState, ListName } from './types';
 import './css/PageInner.css';
 
 function PageInner() {

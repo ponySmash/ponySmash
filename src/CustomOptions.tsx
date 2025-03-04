@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CORSProxyResponse, CharListAndNull, ListProps, StateSet } from './types.ts';
-import { getJSON, loadList } from './util.ts';
+import { CORSProxyResponse, CharListAndNull, ListProps, StateSet } from './types';
+import { getJSON, loadList } from './util';
 import ReactGA from 'react-ga4';
 
 function customListSubmitHandler(props: {

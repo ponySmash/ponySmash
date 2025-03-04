@@ -1,7 +1,7 @@
 import React from 'react';
-import { CharListAndNull, ListName, ListProps, Ref, StateSet } from './types.ts';
-import Lists from './Lists.ts';
-import { loadList } from './util.ts';
+import { CharListAndNull, ListName, ListProps, Ref, StateSet } from './types';
+import Lists from './Lists';
+import { loadList } from './util';
 
 function ListType(props: {
     OG_LIST: React.MutableRefObject<CharListAndNull>,

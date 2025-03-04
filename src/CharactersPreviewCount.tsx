@@ -1,5 +1,5 @@
 import React from 'react';
-import { CharListAndNull, ListName } from './types.ts';
+import { CharListAndNull, ListName } from './types';
 import './css/CharactersPreviewCount.css';
 
 function getCharsCount(isLoadingList: boolean, listType: ListName, OG_LIST: CharListAndNull, filteredList: CharListAndNull) {

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 
-import { EventDecorations } from './types.ts';
-import { Events } from './Events.tsx';
-import PageInner from './PageInner.tsx';
-import { Footer } from './Footer.tsx';
+import { EventDecorations } from './types';
+import { Events } from './Events';
+import PageInner from './PageInner';
+import { Footer } from './Footer';
 
 
 import './css/Events.css';

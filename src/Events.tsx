@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { EventDecorations, Ref, StateSet } from './types.ts';
-import { EasterDate } from './util.ts';
+import { EventDecorations, Ref, StateSet } from './types';
+import { EasterDate } from './util';
 
-import { AprilFools } from './events/AprilFools.tsx';
-import { Halloween } from './events/Halloween.tsx';
-import { StarWars } from './events/StarWars.tsx';
-import { Christmas } from './events/Christmas.tsx';
-import { NewYear } from './events/NewYear.tsx';
-import { BDay } from './events/BDay.tsx';
-import { Easters } from './events/Easters.tsx';
-import { Valentines } from './events/Valentines.tsx';
-import { BlazeIt } from './events/BlazeIt.tsx';
+import { AprilFools } from './events/AprilFools';
+import { Halloween } from './events/Halloween';
+import { StarWars } from './events/StarWars';
+import { Christmas } from './events/Christmas';
+import { NewYear } from './events/NewYear';
+import { BDay } from './events/BDay';
+import { Easters } from './events/Easters';
+import { Valentines } from './events/Valentines';
+import { BlazeIt } from './events/BlazeIt';
 
 
 export function Events(props: {

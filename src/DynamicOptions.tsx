@@ -1,6 +1,6 @@
 import React from 'react';
-import { CharListAndNull, ListProps, StateSet } from './types.ts';
-import { filterList } from './util.ts';
+import { CharListAndNull, ListProps, StateSet } from './types';
+import { filterList } from './util';
 
 function DynamicOptions(props: {
     listProps: React.MutableRefObject<ListProps>,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Character, List, ListName, Ref } from './types.ts';
-import PonyContainer from './PonyContainer.tsx';
-import Lists from './Lists.ts';
+import { Character, List, ListName, Ref } from './types';
+import PonyContainer from './PonyContainer';
+import Lists from './Lists';
 
 function EndScreen(props: {
     smashes: React.MutableRefObject<Character[]>,

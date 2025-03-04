@@ -7,16 +7,18 @@
     "author": "EXtremeExploit",
     "license": "AGPL-3.0-only",
     "dependencies": {
-        "@types/react": "^18.2.38",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-fastclick": "^3.0.2",
+        "@types/react": "^19.0.10",
+        "@vitejs/plugin-react": "^4.3.4",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
         "react-ga4": "^2.1.0",
-        "react-scripts": "^5.0.1"
+        "vite": "^6.2.0"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "vite",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "serve": "vite preview",
         "test": "mocha",
         "eject": "react-scripts eject",
         "minor": "npm version minor && git commit -S --amend --no-edit",
@@ -37,13 +39,15 @@
         ]
     },
     "devDependencies": {
-        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
         "@stylistic/eslint-plugin": "^1.5.0",
         "@types/chai": "^4.3.11",
         "@types/mocha": "^10.0.6",
+        "@types/react-dom": "^19.0.4",
+        "@typescript-eslint/eslint-plugin": "^8.26.0",
         "chai": "^5.0.0",
         "eslint": "^8.55.0",
         "mocha": "^10.2.0",
-        "tsx": "^4.7.0"
+        "tsx": "^4.7.0",
+        "vite-plugin-eslint": "^1.8.1"
     }
 }

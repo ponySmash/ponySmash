@@ -1,7 +1,7 @@
 import React from 'react';
-import { CharListAndNull, ListName, ListProps, Ref, StateSet } from './types.ts';
-import DynamicOptions from './DynamicOptions.tsx';
-import CustomOptions from './CustomOptions.tsx';
+import { CharListAndNull, ListName, ListProps, Ref, StateSet } from './types';
+import DynamicOptions from './DynamicOptions';
+import CustomOptions from './CustomOptions';
 import './css/MenuOptions.css';
 
 function MenuOptions(props: {

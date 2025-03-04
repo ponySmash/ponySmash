@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { CharListAndNull, Character, GameState, ListName, ListProps, Ref, StateSet } from './types.ts';
-import { loadList } from './util.ts';
-import CharactersPreviewCount from './CharactersPreviewCount.tsx';
-import ListType from './ListType.tsx';
-import MenuOptions from './MenuOptions.tsx';
-import Lists from './Lists.ts';
+import { CharListAndNull, Character, GameState, ListName, ListProps, Ref, StateSet } from './types';
+import { loadList } from './util';
+import CharactersPreviewCount from './CharactersPreviewCount';
+import ListType from './ListType';
+import MenuOptions from './MenuOptions';
+import Lists from './Lists';
 import ReactGA from 'react-ga4';
 import './css/Menu.css';
 

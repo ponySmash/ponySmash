@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Character, GameState, ListName, StateSet } from './types.ts';
-import ButtonsHolder from './ButtonsHolder.tsx';
+import { Character, GameState, ListName, StateSet } from './types';
+import ButtonsHolder from './ButtonsHolder';
 import ReactGA from 'react-ga4';
 
 import './css/Game.css';

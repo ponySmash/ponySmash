@@ -1,5 +1,5 @@
 import React from 'react';
-import { Character } from './types.ts';
+import { Character } from './types';
 import './css/PonyContainer.css';
 
 function PonyContainer(props: { smashes: React.MutableRefObject<Character[]> }) {

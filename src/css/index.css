@@ -29,3 +29,7 @@ a {
 a:visited {
     color: pink;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+}

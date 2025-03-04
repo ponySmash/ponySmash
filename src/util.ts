@@ -1,7 +1,7 @@
 import React from 'react';
 import { CORSProxyResponse, CharListAndNull, Character, List, StateSet, ListName, ListProps } from './types';
-import Lists from './Lists.ts';
-import { LIST_LATEST_VERSION } from './constants.ts';
+import Lists from './Lists';
+import { LIST_LATEST_VERSION } from './constants';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function getJSON(url: string, callback: (status: number | null, data: CORSProxyResponse | any) => void) {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Character } from './types.ts';
+import { Character } from './types';
 import './css/ButtonsHolder.css';
 
 function ButtonsHolder(props: {
@@ -53,7 +53,7 @@ function ButtonsHolder(props: {
     });
 
     return (
-        <div id="buttons-holder">
+        <div id="buttons-holder" className='disable-dbl-tap-zoom'>
             <div className={'button smash-button ' + (smashButtonAnimated ? 'smash-button-anim' : '')} onClick={smashClick}>
                 {props.character.smashText ?? (props.character.filly ? 'Cute!' : 'SMASH!')} (←)
                 <div className='button-combo'>{smashStreak.current}x</div>

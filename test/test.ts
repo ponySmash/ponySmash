@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import { createHash } from 'crypto';
 import { existsSync, readdirSync, readFileSync } from 'fs';
 
-import Lists from '../src/Lists.ts';
+import Lists from '../src/Lists';
 
 describe('List tests', () => {
     Object.entries(Lists).forEach((l) => {

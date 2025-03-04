@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
-import { EventEastersData, StateSet } from '../types.ts';
+import { EventEastersData, StateSet } from '../types';
 
 export function Easters(props: {
     dataSet: StateSet<object | EventEastersData>

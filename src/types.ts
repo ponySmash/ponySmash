@@ -1,4 +1,4 @@
-import Lists from './Lists.ts';
+import Lists from './Lists';
 
 declare module 'react' {
     interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {

@@ -1,13 +1,13 @@
 import React from 'react';
-import { version } from './constants.ts';
-import { EventDecorations, EventEastersData, EventStarWarsData, Ref } from './types.ts';
+import { version } from './constants';
+import { EventDecorations, EventEastersData, EventStarWarsData, Ref } from './types';
 
 
 function GetCredits(props:
     {
         event: EventDecorations,
         eventData: object
-    }): JSX.Element {
+    }): React.JSX.Element {
     let creditsUrl = '';
     switch (props.event) {
         case 'none': break;
@@ -22,12 +22,14 @@ function GetCredits(props:
                 case 'fluttershy': creditsUrl = 'https://derpibooru.org/images/1078924'; break;
                 case 'starlight': creditsUrl = 'https://derpibooru.org/images/1017669'; break;
             }
+            break;
         }
         case 'blazeIt': {
             switch ((props.eventData as EventStarWarsData).imgName) {
                 case 'blazeIt1': creditsUrl = 'https://derpibooru.org/images/2819742'; break;
                 case 'blazeIt2': creditsUrl = 'https://derpibooru.org/images/1086556'; break;
             }
+            break;
         }
         case 'easters': {
             switch ((props.eventData as EventEastersData).imgName) {

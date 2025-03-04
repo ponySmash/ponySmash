@@ -1,7 +1,7 @@
 import DefaultList from './lists/default.json';
 import AppleFamily from './lists/appleFamily.json';
 import Community from './lists/community.json';
-import { Character, List } from './types.ts';
+import { Character, List } from './types';
 
 // This is only useful for the eqg list, i dont like this
 let All = [

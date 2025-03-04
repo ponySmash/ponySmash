@@ -5,8 +5,8 @@ import { Events } from './Events';
 import PageInner from './PageInner';
 import { Footer } from './Footer';
 
-
 import './css/Events.css';
+
 function App() {
     const eventDecoration = useRef<EventDecorations>('none');
     const [eventData, eventDataSet] = useState<object>({});

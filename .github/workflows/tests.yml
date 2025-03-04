@@ -35,3 +35,20 @@ jobs:
       
             - name: "Check eslint"
               run: npx eslint .
+  build: 
+          runs-on: ubuntu-latest
+          name: Run eslint
+          steps:
+            - uses: actions/checkout@v3
+              with:
+                fetch-depth: 1
+            - uses: actions/setup-node@v3
+              with:
+                node-version: '20.x'
+                cache: npm
+      
+            - name: "Install"
+              run: npm install
+      
+            - name: "Build"
+              run: npm run build

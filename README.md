@@ -1,7 +1,7 @@
 # Pony Smash
 
 ## What the hell is this
-Pretty sure you know smash or pass, well this is that but with every character in My Little Pony: Friendship is Magic
+Pretty sure you know smash or pass, well this is that but with every character in My Little Pony: Friendship is Magic and some extra ones
 ## Ok but why?
 I was bored tbh
 
@@ -18,12 +18,12 @@ I was bored tbh
 ### Instructions
 * EASY! :D
 * First you want to fork this repository
-* Clone your fork (you can do this an the rest of the steps easily with [GitHub Desktop](https://desktop.github.com/) if you dont know much about git)
+* Clone your fork (you can do this and the rest of the steps easily with [GitHub Desktop](https://desktop.github.com/) if you dont know much about git)
 * Create a new branch with the name you want
 * Add the **WebP** ([how do i convert png to webp?](./CONTRIBUTING.md#images-should-be-in-the-webp-format)) to `public/characters` folder, you are free to put it in the respective folder it should go to, but if you are unsure put it in `unsorted`
 * Add the character to the list inside one of the json files in `src/lists/`
    *  `name`: This is what appears above the image
-   *  `img`: The path to the image, **ITS CASE SENSITIVE**
+   *  `img`: The path to the image, **ITS CASE SENSITIVE**. Try to follow the same convention as the others
    *  `filly`: Is the character underage?
    *  `eqg`: Is the character/image from Equestria Girls?
    *  `gender`: `"male"`/`"female"`/`null`

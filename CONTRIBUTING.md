@@ -5,7 +5,7 @@ Yay, you want to contribute!. If you are here, then that means that your contrib
 * First, you may want to know how to actually get this up and running on your local machine.
 * Asuming you already have cloned it. and a working Node.JS and NPM version, you want to run `npm install` in the same directory as `package.json`. This will install the required dependencies (React and ESLint)
 * Once it's done installing, you can run `npm start` to start serving the site, and your browser will open. Whatever changes you make to the project while the site is opened will be immediately reflected in your browser. There is no need to reload.
-* If you want to build a production-ready static site, you can use `npm run build`. The resulted build will end up in the `build` directory
+* If you want to build a production-ready static site, you can use `npm run build`. The resulted build will end up in the `dist` directory
 
 ## Images should be in the WebP format
 * To convert the png files over the WebP without quality loss, use this command:

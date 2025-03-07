@@ -1,4 +1,5 @@
 /* eslint-disable @stylistic/quotes */
+import { defineConfig } from 'eslint/config';
 import stylistic from "@stylistic/eslint-plugin";
 import stylisticTs from "@stylistic/eslint-plugin-ts";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
@@ -16,7 +17,7 @@ const compat = new FlatCompat({
     allConfig: js.configs.all
 });
 
-export default [{
+export default defineConfig([{
     ignores: ["build/*", "dist/*"]
 }, ...compat.extends("plugin:@typescript-eslint/recommended"), {
     plugins: {
@@ -156,4 +157,4 @@ export default [{
             argsIgnorePattern: "^_"
         }]
     }
-}];
+}]);

@@ -18,9 +18,8 @@
         "start": "vite",
         "dev": "vite",
         "build": "tsc && vite build",
-        "serve": "vite preview",
-        "test": "mocha",
-        "eject": "react-scripts eject",
+        "serve": "npx vite preview",
+        "test": "npx mocha",
         "minor": "npm version minor && git commit -S --amend --no-edit",
         "patch": "npm version patch && git commit -S --amend --no-edit",
         "major": "npm version major && git commit -S --amend --no-edit",
@@ -40,7 +39,7 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.0",
-        "@eslint/js": "^9.21.0",
+        "@eslint/js": "^9.22.0",
         "@stylistic/eslint-plugin": "^4.2.0",
         "@stylistic/eslint-plugin-ts": "^4.2.0",
         "@types/chai": "^4.3.11",
@@ -49,10 +48,9 @@
         "@types/react-dom": "^19.0.4",
         "@typescript-eslint/eslint-plugin": "^8.26.0",
         "chai": "^5.0.0",
-        "eslint": "^9.21.0",
+        "eslint": "^9.22.0",
         "globals": "^16.0.0",
         "mocha": "^11.1.0",
-        "tsx": "^4.7.0",
         "vite-plugin-eslint": "^1.8.1"
     }
 }

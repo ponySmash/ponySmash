@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import { EventDecorations } from './types';
+import Meta from './Meta';
 import { Events } from './Events';
 import PageInner from './PageInner';
 import { Footer } from './Footer';
@@ -13,6 +14,7 @@ function App() {
 
     return (
         <>
+            <Meta />
             <Events key='events' eventDecoration={eventDecoration} eventDataSet={eventDataSet} />
             <PageInner key='page-inner' />
             <Footer key='footer' event={eventDecoration} eventData={eventData} />

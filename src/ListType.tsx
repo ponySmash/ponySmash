@@ -4,9 +4,9 @@ import Lists from './Lists';
 import { loadList } from './util';
 
 function ListType(props: {
-    OG_LIST: React.MutableRefObject<CharListAndNull>,
+    OG_LIST: Ref<CharListAndNull>,
     setFilteredList: StateSet<CharListAndNull>,
-    listProps: React.MutableRefObject<ListProps>,
+    listProps: Ref<ListProps>,
     listType: Ref<ListName>
 }) {
     function changedList(ev: React.ChangeEvent<HTMLSelectElement>) {

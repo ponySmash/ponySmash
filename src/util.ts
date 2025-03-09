@@ -1,5 +1,4 @@
-import React from 'react';
-import { CORSProxyResponse, CharListAndNull, Character, List, StateSet, ListName, ListProps } from './types';
+import { CORSProxyResponse, CharListAndNull, Character, List, StateSet, ListName, ListProps, Ref } from './types';
 import Lists from './Lists';
 import { LIST_LATEST_VERSION } from './constants';
 
@@ -74,7 +73,7 @@ export function filterList(data: CharListAndNull, setFilteredList: StateSet<Char
  * @param listProps List properties
  * @param listType List key type
  */
-export function loadList(list: Character[] | List, OG_LIST: React.MutableRefObject<CharListAndNull>, setFilteredList: StateSet<CharListAndNull> | null, listProps: React.MutableRefObject<ListProps>, listType: ListName) {
+export function loadList(list: Character[] | List, OG_LIST: Ref<CharListAndNull>, setFilteredList: StateSet<CharListAndNull> | null, listProps: Ref<ListProps>, listType: ListName) {
     if (Array.isArray(list)) {
         console.log(`Loading legacy custom list with ${list.length} characters`);
         OG_LIST.current = list;

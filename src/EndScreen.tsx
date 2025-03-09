@@ -4,8 +4,8 @@ import PonyContainer from './PonyContainer';
 import Lists from './Lists';
 
 function EndScreen(props: {
-    smashes: React.MutableRefObject<Character[]>,
-    list: React.MutableRefObject<Character[]>,
+    smashes: Ref<Character[]>,
+    list: Ref<Character[]>,
     listType: Ref<ListName>
 }) {
     const list = Lists[props.listType.current] as List;

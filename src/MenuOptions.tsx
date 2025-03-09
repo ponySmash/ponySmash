@@ -5,11 +5,11 @@ import CustomOptions from './CustomOptions';
 import './css/MenuOptions.css';
 
 function MenuOptions(props: {
-    listProps: React.MutableRefObject<ListProps>,
+    listProps: Ref<ListProps>,
     listType: Ref<ListName>,
     isLoadingList: boolean,
     setIsLoadingList: StateSet<boolean>,
-    OG_LIST: React.MutableRefObject<CharListAndNull>,
+    OG_LIST: Ref<CharListAndNull>,
     filteredList: CharListAndNull,
     setFilteredList: StateSet<CharListAndNull>
 }) {

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { CORSProxyResponse, CharListAndNull, ListProps, StateSet } from './types';
+import { CORSProxyResponse, CharListAndNull, ListProps, Ref, StateSet } from './types';
 import { getJSON, loadList } from './util';
 import ReactGA from 'react-ga4';
 
 function customListSubmitHandler(props: {
-    OG_LIST: React.MutableRefObject<CharListAndNull>,
-    listProps: React.MutableRefObject<ListProps>,
+    OG_LIST: Ref<CharListAndNull>,
+    listProps: Ref<ListProps>,
     setFilteredList: StateSet<CharListAndNull>,
     setIsLoadingList: StateSet<boolean>,
     isLoadingList: boolean
@@ -67,8 +67,8 @@ function customListSubmitHandler(props: {
 
 
 function CustomOptions(props: {
-    OG_LIST: React.MutableRefObject<CharListAndNull>,
-    listProps: React.MutableRefObject<ListProps>,
+    OG_LIST: Ref<CharListAndNull>,
+    listProps: Ref<ListProps>,
     setFilteredList: StateSet<CharListAndNull>,
     setIsLoadingList: StateSet<boolean>,
     isLoadingList: boolean

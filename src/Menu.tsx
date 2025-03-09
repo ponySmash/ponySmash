@@ -12,7 +12,7 @@ function Menu(props:
     {
         ListProps: {
             listType: Ref<ListName>,
-            list: React.MutableRefObject<Character[]>
+            list: Ref<Character[]>
         },
         setGameState: StateSet<GameState>
     }) {

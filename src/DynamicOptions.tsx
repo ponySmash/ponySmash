@@ -1,10 +1,10 @@
 import React from 'react';
-import { CharListAndNull, ListProps, StateSet } from './types';
+import { CharListAndNull, ListProps, Ref, StateSet } from './types';
 import { filterList } from './util';
 
 function DynamicOptions(props: {
-    listProps: React.MutableRefObject<ListProps>,
-    OG_LIST: React.MutableRefObject<CharListAndNull>,
+    listProps: Ref<ListProps>,
+    OG_LIST: Ref<CharListAndNull>,
     setFilteredList: StateSet<CharListAndNull>
 }) {
     return (<>

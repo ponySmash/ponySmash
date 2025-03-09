@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Character, GameState, ListName, StateSet } from './types';
+import { Character, GameState, ListName, Ref, StateSet } from './types';
 import ButtonsHolder from './ButtonsHolder';
 import ReactGA from 'react-ga4';
 
 import './css/Game.css';
 
 function Game(props: {
-    list: React.MutableRefObject<Character[]>,
+    list: Ref<Character[]>,
     setGameState: StateSet<GameState>,
-    smashes: React.MutableRefObject<Character[]>,
+    smashes: Ref<Character[]>,
     listName: ListName
 }) {
     const [i, setI] = useState(0);

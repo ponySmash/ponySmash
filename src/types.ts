@@ -31,11 +31,7 @@ export interface Character {
 
 export type EventDecorations = 'none' | 'starWars' | 'valentines' | 'aprilFools' | 'xmas' | 'halloween' | 'newYear' | 'bday' | 'easters' | 'blazeIt';
 
-export interface EventEastersData {
-    imgName: string;
-}
-
-export interface EventStarWarsData {
+export interface EventDecorationsData {
     imgName: string;
 }
 

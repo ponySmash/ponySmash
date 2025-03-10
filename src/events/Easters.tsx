@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
-import { EventEastersData, StateSet } from '../types';
+import { EventDecorationsData, StateSet } from '../types';
 
 export function Easters(props: {
-    dataSet: StateSet<object | EventEastersData>
+    dataSet: StateSet<EventDecorationsData>
 }) {
     const imgList = [
         'applejack',

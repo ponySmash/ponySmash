@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
-import { EventStarWarsData, StateSet } from '../types';
+import { EventDecorationsData, StateSet } from '../types';
 
 export function BlazeIt(props: {
-    dataSet: StateSet<object | EventStarWarsData>
+    dataSet: StateSet<EventDecorationsData>
 }) {
     const imgList = [
         'blazeIt1',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EventDecorations, Ref, StateSet } from './types';
+import { EventDecorations, EventDecorationsData, Ref, StateSet } from './types';
 import { EasterDate } from './util';
 
 import { AprilFools } from './events/AprilFools';
@@ -16,7 +16,7 @@ import { BlazeIt } from './events/BlazeIt';
 
 export function Events(props: {
     eventDecoration: Ref<EventDecorations>,
-    eventDataSet: StateSet<object>
+    eventDataSet: StateSet<EventDecorationsData>
 }) {
     const date = new Date();
 

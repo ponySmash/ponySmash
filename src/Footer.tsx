@@ -1,6 +1,6 @@
 import React from 'react';
 import { version } from './constants';
-import { EventDecorations, EventEastersData, EventStarWarsData, Ref } from './types';
+import { EventDecorations, EventDecorationsData, Ref } from './types';
 
 
 function GetCredits(props:
@@ -18,21 +18,21 @@ function GetCredits(props:
         case 'bday': creditsUrl = 'https://derpibooru.org/images/2185632'; break;
         case 'valentines': creditsUrl = 'https://derpibooru.org/images/212580'; break;
         case 'starWars': {
-            switch ((props.eventData as EventStarWarsData).imgName) {
+            switch ((props.eventData as EventDecorationsData).imgName) {
                 case 'fluttershy': creditsUrl = 'https://derpibooru.org/images/1078924'; break;
                 case 'starlight': creditsUrl = 'https://derpibooru.org/images/1017669'; break;
             }
             break;
         }
         case 'blazeIt': {
-            switch ((props.eventData as EventStarWarsData).imgName) {
+            switch ((props.eventData as EventDecorationsData).imgName) {
                 case 'blazeIt1': creditsUrl = 'https://derpibooru.org/images/2819742'; break;
                 case 'blazeIt2': creditsUrl = 'https://derpibooru.org/images/1086556'; break;
             }
             break;
         }
         case 'easters': {
-            switch ((props.eventData as EventEastersData).imgName) {
+            switch ((props.eventData as EventDecorationsData).imgName) {
                 case 'derpy': creditsUrl = 'https://www.deviantart.com/up1ter/art/Derpy-Easter-Bunny-294745771'; break;
                 case 'pinkie': creditsUrl = 'https://www.deviantart.com/ace-play/art/Easter-Ponies-Pinkie-Pie-837591200'; break;
                 case 'fluttershy2': creditsUrl = 'https://www.deviantart.com/ace-play/art/Easter-Ponies-Fluttershy-837592150'; break;

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import EndScreen from './EndScreen';
 import Game from './Game';
 import Menu from './Menu';

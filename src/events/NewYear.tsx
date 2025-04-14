@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function NewYear() {
     const body = document.getElementById('body');
     if (body) {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character, Ref } from './types';
 import './css/PonyContainer.css';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character, List, ListName, Ref } from './types';
 import PonyContainer from './PonyContainer';
 import Lists from './Lists';

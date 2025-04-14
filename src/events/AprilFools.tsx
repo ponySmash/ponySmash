@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function AprilFools() {
     const body = document.getElementById('body');
     if (body) {

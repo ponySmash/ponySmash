@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Valentines() {
     return (<>
         <img className='valentines' src={`./images/valentines.webp`}></img>

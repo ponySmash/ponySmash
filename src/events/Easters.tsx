@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { EventDecorationsData, StateSet } from '../types';
 
 export function Easters(props: {

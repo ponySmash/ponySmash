@@ -1,4 +1,3 @@
-import React from 'react';
 import { CharListAndNull, ListProps, Ref, StateSet } from './types';
 import { filterList } from './util';
 

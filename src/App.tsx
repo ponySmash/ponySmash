@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { EventDecorations } from './types';
 import Meta from './Meta';

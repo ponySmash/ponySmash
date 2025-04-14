@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function BDay() {
     return (<>
         <img className='bday' src='./images/bday.webp'></img>

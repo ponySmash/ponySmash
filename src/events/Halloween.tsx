@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Halloween() {
     const body = document.getElementById('body');
     if (body) {

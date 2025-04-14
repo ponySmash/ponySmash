@@ -1,4 +1,3 @@
-import React from 'react';
 import { version } from './constants';
 import { EventDecorations, EventDecorationsData, Ref } from './types';
 
@@ -7,7 +6,7 @@ function GetCredits(props:
     {
         event: EventDecorations,
         eventData: object
-    }): React.JSX.Element {
+    }) {
     let creditsUrl = '';
     switch (props.event) {
         case 'none': break;

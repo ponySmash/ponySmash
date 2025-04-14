@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { EventDecorations, EventDecorationsData, Ref, StateSet } from './types';
 import { EasterDate } from './util';
 

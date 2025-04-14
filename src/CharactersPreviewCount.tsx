@@ -1,4 +1,3 @@
-import React from 'react';
 import { CharListAndNull, ListName } from './types';
 import './css/CharactersPreviewCount.css';
 

@@ -1,12 +1,5 @@
 import Lists from './Lists';
 
-declare module 'react' {
-    interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-        fetchPriority?: 'high' | 'low' | 'auto';
-    }
-}
-
-
 export interface CORSProxyResponse {
     contents: string | null;
     status: {

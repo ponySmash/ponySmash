@@ -3,7 +3,7 @@ import { CORSProxyResponse, CharListAndNull, ListProps, Ref, StateSet } from './
 import { getJSON, loadList } from './util';
 import ReactGA from 'react-ga4';
 
-function customListSubmitHandler(props: {
+async function customListSubmitHandler(props: {
     OG_LIST: Ref<CharListAndNull>,
     listProps: Ref<ListProps>,
     setFilteredList: StateSet<CharListAndNull>,
@@ -18,51 +18,52 @@ function customListSubmitHandler(props: {
         ReactGA.event('load_custom_list', { url: customListURL, cors: useCORSProxy });
     })();
 
-    if (useCORSProxy) {
-        console.log(`Loading custom list "${customListURL}" with CORS proxy`);
-        getJSON(`https://api.allorigins.win/get?url=${encodeURIComponent(customListURL)}`, (status, data: CORSProxyResponse | null) => {
-            if (!status?.toString().startsWith('2')) {
+    try {
+        props.setIsLoadingList(true);
+        if (useCORSProxy) {
+            console.log(`Loading custom list "${customListURL}" with CORS proxy`);
+            const { status, data }: { status: number, data: CORSProxyResponse } = await getJSON(`https://api.allorigins.win/get?url=${encodeURIComponent(customListURL)}`);
+            if (!status.toString().startsWith('2')) {
                 const errorStr = `CORS Proxy code: ${status}\n`;
-                alert('Something went wrong... \n' + errorStr);
+                alert('Something went wrong with the proxy... \n' + errorStr);
+                console.error(errorStr);
             } else {
+                if (data == null) throw 'CORS Proxy returned invalid JSON';
+                if (data.contents == null) throw 'Content is null';
                 try {
-                    if (data == null) throw 'CORS Proxy returned invalid JSON';
-                    if (data.contents == null) throw 'Content is null';
-                    try {
-                        JSON.parse(data.contents);
-                    } catch (error) {
-                        console.error(error);
-                        throw 'Content is invalid JSON';
-                    }
-
-                    loadList(JSON.parse(data.contents), props.OG_LIST, props.setFilteredList, props.listProps, 'custom');
-                } catch (e) {
-                    if (e)
-                        alert(e);
-                    else
-                        alert('Something went wrong D:');
+                    JSON.parse(data.contents);
+                } catch (error) {
+                    console.error(error);
+                    throw 'Content is invalid JSON';
                 }
-            }
-            props.setIsLoadingList(false);
-        });
-    } else {
-        console.log(`Loading custom list "${customListURL}" without CORS proxy`);
-        getJSON(customListURL, (status, data) => {
-            if (status === 0 && data === '') {
-                alert('Request failed (probably blocked by CORS)\nEnable CORS Proxy just in case');
-                props.setIsLoadingList(false);
-                return;
-            }
-            if (!status?.toString().startsWith('2')) {
-                const errorStr = `HTTP status code: ${status}\n`;
-                alert('Something went wrong... \n' + errorStr);
-            }
 
-            loadList(data, props.OG_LIST, props.setFilteredList, props.listProps, 'custom');
-            props.setIsLoadingList(false);
-        });
+                loadList(JSON.parse(data.contents), props.OG_LIST, props.setFilteredList, props.listProps, 'custom');
+            }
+        } else {
+            console.log(`Loading custom list "${customListURL}" without CORS proxy`);
+            try {
+                const { status, data } = await getJSON(customListURL);
+                if (!status.toString().startsWith('2')) {
+                    const errorStr = `HTTP status code: ${status}\n`;
+                    alert('Something went wrong... \n' + errorStr);
+                }
+
+                loadList(data, props.OG_LIST, props.setFilteredList, props.listProps, 'custom');
+            } catch (error) {
+                console.error(error);
+                alert('Request failed (probably blocked by CORS)\nEnable CORS Proxy just in case');
+            }
+        }
+        props.setIsLoadingList(false);
+    } catch (e) {
+        if (e) {
+            console.error(e);
+            alert(e);
+        }
+        else
+            alert('Something went wrong D:');
     }
-    props.setIsLoadingList(true);
+    props.setIsLoadingList(false);
 }
 
 

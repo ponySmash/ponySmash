@@ -3,18 +3,21 @@ import Lists from './Lists';
 import { LIST_LATEST_VERSION } from './constants';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getJSON(url: string, callback: (status: number | null, data: CORSProxyResponse | any) => void) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = () => {
-        const status = xhr.status;
-        callback(status, xhr.response);
-    };
-    xhr.onerror = () => {
-        callback(0, '');
-    };
-    xhr.send();
+export async function getJSON(url: string): Promise<{ status: number, data: CORSProxyResponse | any }> {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = () => {
+            const status = xhr.status;
+            resolve({ status, data: xhr.response });
+        };
+        xhr.onerror = () => {
+            // callback(0, '');
+            reject();
+        };
+        xhr.send();
+    });
 }
 
 export function filterList(data: CharListAndNull, setFilteredList: StateSet<CharListAndNull> | null, listProps: ListProps) {

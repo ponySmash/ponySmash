@@ -10,36 +10,37 @@ import './css/Menu.css';
 
 function Menu(props:
     {
-        ListProps: {
-            listType: Ref<ListName>,
-            list: Ref<Character[]>
-        },
+        listType: Ref<ListName>,
+        finalList: Ref<Character[]>,
         setGameState: StateSet<GameState>
     }) {
     const [isLoadingList, setIsLoadingList] = useState(false);
-    const OG_LIST = useRef<CharListAndNull>(Lists[props.ListProps.listType.current].list);
+    const OG_LIST = useRef<CharListAndNull>(Lists[props.listType.current].list);
 
     const listProps = useRef<ListProps>({
-        filters: Lists[props.ListProps.listType.current].filters,
-        extensions: Lists[props.ListProps.listType.current].extensions
+        filters: Lists[props.listType.current].filters,
+        extensions: Lists[props.listType.current].extensions
     });
 
-    const [filteredList, setFilteredList] = useState<CharListAndNull>(loadList(Lists[props.ListProps.listType.current], OG_LIST, null, listProps, props.ListProps.listType.current));
+    const [filteredList, setFilteredList] = useState<CharListAndNull>(() => {
+        const loadedList = loadList(Lists[props.listType.current], OG_LIST, null, listProps, props.listType.current);
+        return loadedList;
+    });
 
     function startButtonClick(_ev: React.MouseEvent<HTMLButtonElement>) {
         if (filteredList != null) {
-            props.ListProps.list.current = filteredList.sort((_a, _b) => 0.5 - Math.random());
+            props.finalList.current = filteredList.sort((_a, _b) => 0.5 - Math.random());
             props.setGameState('ingame');
 
             (async () => {
                 const gaFilters = Object.entries(listProps.current.filters).filter((f) => f[1].value == true).map((f) => f[0]);
-                ReactGA.event('level_start', { level_name: props.ListProps.listType.current, filters: gaFilters });
+                ReactGA.event('level_start', { level_name: props.listType.current, filters: gaFilters });
             })();
         }
     }
 
     const MenuOptionsProps = {
-        listType: props.ListProps.listType,
+        listType: props.listType,
         isLoadingList: isLoadingList,
         setIsLoadingList: setIsLoadingList,
         OG_LIST: OG_LIST,
@@ -51,9 +52,9 @@ function Menu(props:
         <>
             <p className="title">MLP: FiM Smash or Pass</p>
 
-            <ListType key='listType' setFilteredList={setFilteredList} listType={props.ListProps.listType} OG_LIST={OG_LIST} listProps={listProps} />
+            <ListType key='listType' setFilteredList={setFilteredList} listType={props.listType} OG_LIST={OG_LIST} listProps={listProps} />
             <MenuOptions key='menu-options' listProps={listProps} {...MenuOptionsProps} />
-            <CharactersPreviewCount isLoadingList={isLoadingList} listType={props.ListProps.listType.current} OG_LIST={OG_LIST.current} filteredList={filteredList} />
+            <CharactersPreviewCount isLoadingList={isLoadingList} listType={props.listType.current} OG_LIST={OG_LIST.current} filteredList={filteredList} />
             <br />
             <button id="start" className="start-button" disabled={filteredList == null || filteredList.length === 0} onClick={startButtonClick}>Start</button>
         </>

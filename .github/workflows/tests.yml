@@ -10,7 +10,7 @@ jobs:
           fetch-depth: 1
       - uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '22.x'
           cache: npm
 
       - name: "Install"
@@ -27,7 +27,7 @@ jobs:
                 fetch-depth: 1
             - uses: actions/setup-node@v3
               with:
-                node-version: '20.x'
+                node-version: '22.x'
                 cache: npm
       
             - name: "Install"
@@ -44,11 +44,11 @@ jobs:
                 fetch-depth: 1
             - uses: actions/setup-node@v3
               with:
-                node-version: '20.x'
+                node-version: '22.x'
                 cache: npm
       
             - name: "Install"
               run: npm install
       
             - name: "Build"
-              run: npm run build
+              run: node --run build

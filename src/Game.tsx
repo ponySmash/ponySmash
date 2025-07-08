@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Character, GameState, ListName, Ref, StateSet } from './types';
 import ButtonsHolder from './ButtonsHolder';
-import ReactGA from 'react-ga4';
 
 import './css/Game.css';
 
@@ -18,11 +17,6 @@ function Game(props: {
     function endingHandler(): boolean {
         if (i === props.list.current.length - 1) {
             props.setGameState('end');
-
-            (async () => {
-                ReactGA.event('level_end', { level_name: props.listName, smashes: props.smashes.current.map((c) => c.name), numSmashes: props.smashes.current.length, numList: props.list.current.length });
-            })();
-
             return true;
         }
         return false;
@@ -32,18 +26,12 @@ function Game(props: {
         props.smashes.current.push(props.list.current[i]);
 
         if (endingHandler()) return false;
-        (async () => {
-            ReactGA.event('smash', { character: props.list.current[i].name, listName: props.listName });
-        })();
         setI(i + 1);
         return true;
     }
 
     function passClick(_ev?: React.MouseEvent<HTMLElement>) {
         if (endingHandler()) return false;
-        (async () => {
-            ReactGA.event('pass', { character: props.list.current[i].name, listName: props.listName });
-        })();
         setI(i + 1);
         return true;
     }

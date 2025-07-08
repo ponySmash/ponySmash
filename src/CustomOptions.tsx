@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CORSProxyResponse, CharListAndNull, ListProps, Ref, StateSet } from './types';
 import { getJSON, loadList } from './util';
-import ReactGA from 'react-ga4';
 
 async function customListSubmitHandler(props: {
     OG_LIST: Ref<CharListAndNull>,
@@ -13,10 +12,6 @@ async function customListSubmitHandler(props: {
     props.OG_LIST.current = null;
     props.setFilteredList(null);
     if (props.isLoadingList === true) return; // Load the first list first
-
-    (async () => {
-        ReactGA.event('load_custom_list', { url: customListURL, cors: useCORSProxy });
-    })();
 
     try {
         props.setIsLoadingList(true);

@@ -5,7 +5,6 @@ import CharactersPreviewCount from './CharactersPreviewCount';
 import ListType from './ListType';
 import MenuOptions from './MenuOptions';
 import Lists from './Lists';
-import ReactGA from 'react-ga4';
 import './css/Menu.css';
 
 function Menu(props:
@@ -31,11 +30,6 @@ function Menu(props:
         if (filteredList != null) {
             props.finalList.current = filteredList.sort((_a, _b) => 0.5 - Math.random());
             props.setGameState('ingame');
-
-            (async () => {
-                const gaFilters = Object.entries(listProps.current.filters).filter((f) => f[1].value == true).map((f) => f[0]);
-                ReactGA.event('level_start', { level_name: props.listType.current, filters: gaFilters });
-            })();
         }
     }
 

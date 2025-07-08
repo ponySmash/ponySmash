@@ -17,7 +17,7 @@ Yay, you want to contribute!. If you are here, then that means that your contrib
 * This will convert all the png files to webp in the current standing directory
 
 ## Actually coding
-* This project uses ESLint for linting. If your IDE/Editor doesn't support it by default, you should try installing an extension that enables this functionality, this is required for maintaining consistency among the repo and having things look nice. If there is no such extension, you can just run `npx eslint .` in a terminal to check for eslint rules manually.
+* This project uses ESLint for linting. If your IDE/Editor doesn't support it by default, you should try installing an extension that enables this functionality, this is required for maintaining consistency among the repo and having things look nice. If there is no such extension, you can just run `node --run lint` in a terminal to check for eslint rules manually.
 * You can code now, or refactor. Whatever, as long as it's good code and improves stuff its welcome
 * Once you are done coding and you think your changes look good, you can open a pull request. However, before pushing your changes, you should keep in mind that if you plan on contributing to the repository again, DO NOT commit to the master branch of your fork. All the changes you make should be in a separate branch. This is to avoid every pull request having noise or merge commits before the actual code.
 * Now you can actually push your changes to your new branch and open a PR. :D

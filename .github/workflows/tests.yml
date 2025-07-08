@@ -34,7 +34,7 @@ jobs:
               run: npm install
       
             - name: "Check eslint"
-              run: npx eslint .
+              run: node --run lint
   build: 
           runs-on: ubuntu-latest
           name: Build
